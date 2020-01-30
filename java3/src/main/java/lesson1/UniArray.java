@@ -1,5 +1,7 @@
 package lesson1;
 
+import java.util.ArrayList;
+
 public class UniArray<T> {
     private T[] arr;
 
@@ -24,5 +26,14 @@ public class UniArray<T> {
         sb.append("]");
 
         return  sb.toString();
+    }
+
+    public ArrayList<T> toArrayList(){
+        ArrayList<T> arrayList = new ArrayList<T>();
+        for (T element: arr) {
+            arrayList.add(element);
+        }
+
+        return arrayList;
     }
 }
