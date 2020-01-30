@@ -9,19 +9,19 @@ public class UniArray<T> {
         this.arr = arr;
     }
 
-    public void swapped(int ind1, int ind2){
-        T obj;
+    public void swapped(int index1, int index2){
+        T element;
 
-        obj = arr[ind2];
-        arr[ind2] = arr[ind1];
-        arr[ind1] = obj;
+        element = arr[index2];
+        arr[index2] = arr[index1];
+        arr[index1] = element;
     }
 
     public String toString(){
         StringBuilder sb = new StringBuilder("[");
 
-        for (int i = 0; i <arr.length ; i++) {
-            sb.append(arr[i]).append(" ");
+        for (T element : arr) {
+            sb.append(element).append(" ");
         }
         sb.append("]");
 
@@ -29,11 +29,8 @@ public class UniArray<T> {
     }
 
     public ArrayList<T> toArrayList(){
-        ArrayList<T> arrayList = new ArrayList<T>();
-        for (T element: arr) {
-            arrayList.add(element);
-        }
-
+        ArrayList<T> arrayList = new ArrayList<>();
+        for (T element: arr) arrayList.add(element);
         return arrayList;
     }
 }
