@@ -156,7 +156,7 @@ public class Main {
             cols[1] = new ColumnAttribute( "product_id", "INTEGER", "REFERENCES product (id)");
             cols[2] = new ColumnAttribute("year", "INTEGER", "NOT NULL");
             execDDLTableQuery("catalog", cols,"CREATE");
-//            execDDLTableQuery("catalog", cols,"DROP");
+            execDDLTableQuery("catalog", cols,"DROP");
 
         } catch (SQLException e) {
             e.printStackTrace();
